@@ -14,4 +14,6 @@ public class CommonService {
         }
         return cm.getMarketCode();
     }
+    
+    
 }
