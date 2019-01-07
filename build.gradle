@@ -12,3 +12,10 @@ dependencies {
 compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
     
 }
+
+jar {  
+
+  from {
+    configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+  }
+}
